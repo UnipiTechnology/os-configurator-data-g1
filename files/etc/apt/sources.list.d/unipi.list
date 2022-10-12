@@ -1,1 +1,1 @@
-deb https://repo.unipi.technology/debian bullseye g1-main main patron-test test
+deb https://repo.unipi.technology/debian bullseye g1-main main g1-test test
