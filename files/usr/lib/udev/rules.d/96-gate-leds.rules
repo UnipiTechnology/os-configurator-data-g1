@@ -1,0 +1,2 @@
+# ACT LED on UNIPI Gate series
+ACTION=="add", SUBSYSTEM=="leds", DEVPATH=="*/leds/unipi*sysled-xh", RUN+="/bin/sh -ec 'echo timer > /sys/$${DEVPATH}/trigger && echo 50 > /sys/$${DEVPATH}/delay_off && echo 2000 > /sys/$${DEVPATH}/delay_on || exit 0"
