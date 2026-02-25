@@ -11,9 +11,3 @@ ARCH="$(dpkg-architecture -q DEB_BUILD_ARCH)"
 #apt update && apt install -y python3-jinja2 python3-yaml
 #apt install -y unipi-kernel-headers
 
-. "$(pwd)/gitlab-ci/fix_apt_lists.sh"
-
-#if [ -z "${CI_COMMIT_TAG}" ]; then
-#    # For test and dev- branches compile also finaltest dtb
-#    cat dts/Makefile.finaltest >> dts/Makefile || true
-#fi
