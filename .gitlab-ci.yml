@@ -7,5 +7,5 @@ variables:
     package_name: "unipi-os-configurator-data"
     build_for_product: "g1"
     build_for_distribution: "trixie"
-    #publish_dst_url: "git@github.com:UniPiTechnology/os-configurator-data-g1.git"
-    #publish_to_remote: "yes"
+    publish_dst_url: "git@github.com:UniPiTechnology/os-configurator-data-g1.git"
+    publish_to_remote: "yes"
