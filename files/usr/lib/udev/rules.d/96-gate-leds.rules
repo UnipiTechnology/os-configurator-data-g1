@@ -2,14 +2,14 @@
 ACTION=="add", SUBSYSTEM=="leds", DEVPATH=="*/leds/unipi*sysled-xh", RUN+="/bin/sh -ec 'echo timer > /sys/$${DEVPATH}/trigger && echo 50 > /sys/$${DEVPATH}/delay_off && echo 2000 > /sys/$${DEVPATH}/delay_on || exit 0"
 
 ACTION=="add|remove", SUBSYSTEM=="tty", DEVPATH=="*/tty/ttyS1", RUN+="/usr/lib/unipi/uhelper rs485-1 tty 1 $name"
-ACTION=="add|remove", SUBSYSTEM=="leds", DEVPATH=="*/leds/unipi-sysled-x2",  RUN+="/usr/lib/unipi/uhelper rs485.1 led.tx 1 $name"
-ACTION=="add|remove", SUBSYSTEM=="leds", DEVPATH=="*/leds/unipi-sysled-x3",  RUN+="/usr/lib/unipi/uhelper rs485.1 led.rx 1 $name"
+ACTION=="add|remove", SUBSYSTEM=="leds", DEVPATH=="*/leds/unipi-sysled-x2",  RUN+="/usr/lib/unipi/uhelper rs485-1 led.tx 1 $name"
+ACTION=="add|remove", SUBSYSTEM=="leds", DEVPATH=="*/leds/unipi-sysled-x3",  RUN+="/usr/lib/unipi/uhelper rs485-1 led.rx 1 $name"
 ACTION=="add", SUBSYSTEM=="leds", DEVPATH=="*/leds/unipi-sysled-x2", RUN+="/bin/sh -ec 'echo tty > /sys$${DEVPATH}/trigger; echo ttyS1 > /sys/$${DEVPATH}/ttyname && echo 0 > /sys/$${DEVPATH}/rx || exit 0'"
 ACTION=="add", SUBSYSTEM=="leds", DEVPATH=="*/leds/unipi-sysled-x3", RUN+="/bin/sh -ec 'echo tty > /sys$${DEVPATH}/trigger; echo ttyS1 > /sys/$${DEVPATH}/ttyname && echo 0 > /sys/$${DEVPATH}/tx || exit 0'"
 
 ACTION=="add|remove", SUBSYSTEM=="tty", DEVPATH=="*/tty/ttyS2", RUN+="/usr/lib/unipi/uhelper rs485-2 tty 1 $name"
-ACTION=="add|remove", SUBSYSTEM=="leds", DEVPATH=="*/leds/unipi-sysled-x4",  RUN+="/usr/lib/unipi/uhelper rs485.2 led.tx 1 $name"
-ACTION=="add|remove", SUBSYSTEM=="leds", DEVPATH=="*/leds/unipi-sysled-x5",  RUN+="/usr/lib/unipi/uhelper rs485.2 led.rx 1 $name"
+ACTION=="add|remove", SUBSYSTEM=="leds", DEVPATH=="*/leds/unipi-sysled-x4",  RUN+="/usr/lib/unipi/uhelper rs485-2 led.tx 1 $name"
+ACTION=="add|remove", SUBSYSTEM=="leds", DEVPATH=="*/leds/unipi-sysled-x5",  RUN+="/usr/lib/unipi/uhelper rs485-2 led.rx 1 $name"
 ACTION=="add", SUBSYSTEM=="leds", DEVPATH=="*/leds/unipi-sysled-x4", RUN+="/bin/sh -ec 'echo tty > /sys$${DEVPATH}/trigger; echo ttyS2 > /sys/$${DEVPATH}/ttyname && echo 0 > /sys/$${DEVPATH}/rx || exit 0'"
 ACTION=="add", SUBSYSTEM=="leds", DEVPATH=="*/leds/unipi-sysled-x5", RUN+="/bin/sh -ec 'echo tty > /sys$${DEVPATH}/trigger; echo ttyS2 > /sys/$${DEVPATH}/ttyname && echo 0 > /sys/$${DEVPATH}/tx || exit 0'"
 
